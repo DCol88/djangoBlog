@@ -1,7 +1,8 @@
 {% extends "base.html" %}
  
 {% block content %}
-   
+
+
         <div class="row">
             
             <div class="col-md-2 col-sm-3 text-center">
@@ -14,8 +15,11 @@
                 <div class="row">
                     <div class="col-xs-9">
                         <p>{{ post.content }}</p>
-                        <p><button class="btn btn-default" onclick="location.href={{ post.id }}">Back To Blog</button></p>
-                        <p>{{ post.published_date }}</p>
+                        <p><button class="btn btn-default" onclick="location.href='/blog'">Back To Blog</button></p>
+                        <p>{{ post.published_date}} | <strong>Views</strong> {{ post.views }} | <strong>Tag</strong> {{ post.tag }}</p>
+                            {% load disqus_tags %}
+                            {% set_disqus_title post.title %}
+                            {% disqus_show_comments %}
                     </div>
                 </div>
             </div>

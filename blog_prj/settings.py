@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog'
+    'blog',
+    'django.contrib.sites',  
+    'disqus'
 ]
 
 MIDDLEWARE = [
@@ -123,3 +125,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
+
+DISQUS_WEBSITE_SHORTNAME = 'daveDjangoApp'
+SITE_ID = 1
