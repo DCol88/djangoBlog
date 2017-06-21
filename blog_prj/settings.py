@@ -120,6 +120,9 @@ USE_L10N = True
 USE_TZ = True
 
 
+DEFAULT_FROM_EMAIL = 'dave@noreply.com'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
